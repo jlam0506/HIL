@@ -1,0 +1,21 @@
+name: testing raspberry pi as self-hosted runner
+
+on:
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: pi
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: System info
+        run: |
+          echo "Architecture: $(uname -m)"
+          echo "Hostname: $(hostname)"
+
+      - name: Run tests
+        run: echo "Running tests on Raspberry Pi..."
