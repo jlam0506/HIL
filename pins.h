@@ -2,8 +2,8 @@
 #define PINS_H_DEFINED
 
 // Select the Kolibri Version you want to test by uncommenting one of the lines below
-// KOLIBRI_HARDWARE_REVISION_13 is selected by default if nothing is defined
-// #define KOLIBRI_HARDWARE_REVISION_13
+// KOLIBRI_HARDWARE_REVISION_154 is selected by default if nothing is defined
+#define KOLIBRI_HARDWARE_REVISION_13
 // #define KOLIBRI_HARDWARE_REVISION_15
 
 /* Below are the commands to install/download and setup the libraries/dependencies and also test (compile, upload and monitor) two different versions simultaneously for Windows and Unix systems.
