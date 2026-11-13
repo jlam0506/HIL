@@ -6,19 +6,20 @@
 #include "../../pins.h"
 
 // Select the LED you want to test by uncommenting one of the lines below 
+/*
 #define RED_LED                 GPIO_OUTPUT_LED_RED
 #define GREEN_LED               GPIO_OUTPUT_LED_GREEN
 #define BLUE_LED                GPIO_OUTPUT_LED_BLUE
-
-/*
-#if defined (RED_LED)
-#define LED_BUILTIN_RED                 GPIO_OUTPUT_LED_RED
-#elif defined (GREEN_LED)
-#define LED_BUILTIN1                 GPIO_OUTPUT_LED_GREEN
-#elif defined (BLUE_LED)
-#define LED_BUILTIN2                 GPIO_OUTPUT_LED_BLUE
-#endif 
 */
+
+//#if defined (RED_LED)
+#define LED_BUILTIN_RED                 GPIO_OUTPUT_LED_RED
+//#elif defined (GREEN_LED)
+#define LED_BUILTIN_GREEN                 GPIO_OUTPUT_LED_GREEN
+//#elif defined (BLUE_LED)
+#define LED_BUILTIN_BLUE                 GPIO_OUTPUT_LED_BLUE
+//#endif 
+
 
 inline void turn_on_3v3_switch(void) {
   #if defined (KOLIBRI_HARDWARE_REVISION_13)
@@ -57,23 +58,23 @@ void setup() {
   turn_on_3v3_switch();
 
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(RED_LED, OUTPUT);
-  pinMode(GREEN_LED, OUTPUT);
-  pinMode(BLUE_LED, OUTPUT);
+  pinMode(LED_BUILTIN_RED, OUTPUT);
+  pinMode(LED_BUILTIN_GREEN, OUTPUT);
+  pinMode(LED_BUILTIN_BLUE, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  turn_on_led(RED_LED);             // turn the LED on (HIGH is the voltage level)
-  delay(1000);                      // wait for a second
-  turn_off_led(RED_LED);            // turn the LED off by making the voltage LOW
-  delay(1000);                      // wait for a second
-  turn_on_led(GREEN_LED);     
+  turn_on_led(LED_BUILTIN_RED);             // turn the LED on (HIGH is the voltage level)
+  delay(1000);                              // wait for a second
+  turn_off_led(LED_BUILTIN_RED);            // turn the LED off by making the voltage LOW
+  delay(1000);                              // wait for a second
+  turn_on_led(LED_BUILTIN_GREEN);     
   delay(1000);                  
-  turn_off_led(GREEN_LED);       
+  turn_off_led(LED_BUILTIN_GREEN);       
   delay(1000);                 
-  turn_on_led(BLUE_LED);     
+  turn_on_led(LED_BUILTIN_BLUE);     
   delay(1000);        
-  turn_off_led(BLUE_LED);    
+  turn_off_led(LED_BUILTIN_BLUE);    
   delay(1000);  
 }
