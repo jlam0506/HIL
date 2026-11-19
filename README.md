@@ -151,7 +151,7 @@ The Head Aerosol Generator (HAG) is energized by this Test. The ESP32's built-in
 
 ### Potentiometer
 The Potentiometer in the Kolibri is used to continuously adjust the feedback voltage to the Boost Converter that supplies the voltage used by the Piezo Driver and the Piezo
-- **[TEST PASSED]** Serial Monitor displays the approximate default Power-On-Reset resistance, 5000Ω and the set resistance, 3000Ω. Note that the resolution is ±50Ω.
+- **[TEST PASSED]** Serial Monitor displays the approximate default Power-On-Reset resistance (5000Ω) and the set resistance (3000Ω). Note that the resolution is ±50Ω.
 
 
 ### Power
